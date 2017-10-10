@@ -1,0 +1,29 @@
+<!--
+  Generated template for the LoginNativoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>loginNativo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="usuario">
+    <ion-list>
+      <ion-item>{{usuario.facebook_id}}</ion-item>
+      <ion-item>{{usuario.name}}</ion-item>
+      <ion-item>{{usuario.email}}</ion-item>
+    </ion-list>
+    <button ion-button full href="#" (click)="logout()" >logout!!</button>
+  </div>
+  
+  <button ion-button full (click)="loginNativo()" *ngIf="!usuario">Login</button>
+
+  
+</ion-content>
